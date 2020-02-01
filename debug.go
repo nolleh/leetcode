@@ -4,7 +4,20 @@ import (
 	"strconv"
 )
 
-func debug(desc string, datas ...[]int) {
+func debug(desc string, datas ...int) {
+    str := "("
+    for i, v := range datas {
+        str += strconv.Itoa(v)
+        if i != len(datas)-1 {
+            str += ","
+        }
+    }
+    str += ") "
+	
+	panic(str + ":" + desc)
+}
+
+func debugarr(desc string, datas ...[]int) {
 	str := ""
 	for i, data := range datas {
 		str += "data[" + strconv.Itoa(i) + "]("
