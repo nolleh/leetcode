@@ -2,4 +2,4 @@ What I've missed (messed) ..
 
 - initailize timing
 - unchecked last condition
-
+- fixed mind on passing array (-> modify it as passing index)
