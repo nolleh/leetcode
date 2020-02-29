@@ -42,7 +42,12 @@ func debugstr(desc string, datas ...string) {
 	panic(str + ":" + desc)
 }
 
-func debug(head *ListNode) string {
+type ListNode struct {
+    Val int
+    Next *ListNode
+}
+
+func debugNode(head *ListNode) string {
     now := head
     str := "["
     
