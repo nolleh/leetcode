@@ -41,3 +41,15 @@ func debugstr(desc string, datas ...string) {
 	}
 	panic(str + ":" + desc)
 }
+
+func debug(head *ListNode) string {
+    now := head
+    str := "["
+    
+    for now != nil {
+        str += strconv.Itoa(now.Val) + ","
+        now = now.Next
+    }
+    str += "]"
+    return str
+}
