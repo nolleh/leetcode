@@ -34,3 +34,11 @@ func minmax(array []int) (int, int) {
     }
     return min, max
 }
+
+func pow(base int, up int) int {
+    ret := 1
+    for i := 1; i <= up; i++ {
+        ret *= base
+    }
+    return ret
+}
