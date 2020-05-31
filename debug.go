@@ -81,7 +81,7 @@ type ListNode struct {
     Next *ListNode
 }
 
-func debugNode(head *ListNode) string {
+func debugNode(head *ListNode) {
     now := head
     str := "["
     
@@ -90,5 +90,5 @@ func debugNode(head *ListNode) string {
         now = now.Next
     }
     str += "]"
-    return str
+    panic(str)
 }
