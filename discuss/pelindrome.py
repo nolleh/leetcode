@@ -30,7 +30,7 @@ class Solution:
       # fast 2(1) -> 1
       # slow 1 -> 2(1)
       
-      # in short, we devide list two parts, only with time : O(n), storage: O(n)
+      # in short, we devide list two parts, only with time : O(n), storage: O(1)
       # 
       while n2: # traverse reversed slow
         if n1.val != n2.val: # if not same
