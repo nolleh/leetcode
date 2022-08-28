@@ -1,3 +1,4 @@
+from typing import List
 
 # EASY
 class Solution:
