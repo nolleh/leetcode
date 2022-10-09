@@ -11,5 +11,3 @@ class Solution:
             r-=1
         for i in range(len(prefix)):
             nums[i] = prefix[i]
-
-        return nums
