@@ -16,25 +16,39 @@ class Node:
 # Memory Usage: 15.5 MB, less than 96.98% of Python3 online submissions for Populating Next Right Pointers in Each Node.
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-        # perfect binary tree is always 2^n + 1
-        # where n is level
-        self.track(root, None, 1, True)
-        return root
+	   	if not root:
+            return root
         
-    def track(self, node: 'Optional[Node]', parent: 'Optional[Node]', level: int, amIRightChild: bool):
-      if not node:
-        return
-      
-      if not amIRightChild: # leftnode
-        node.next = parent.right
-      elif parent and not parent.right:
-        node.next = None
-      elif parent:
-        node.next = parent.next.left if parent.next else None
-      if node.left:
-        self.track(node.left, node, level+1, False)
-      if node.right:
-        self.track(node.right, node, level+1, True)
+        leftmost = root
+        while leftmost.left:
+
+        head = leftmost
+        while head:
+            head.left.next = head.right
+            if head.next:
+                head.right.next = head.next.left     
+            head = head.next 
+            leftmost = leftmost.left
+        return root
+   #     # perfect binary tree is always 2^n + 1
+   #     # where n is level
+   #     self.track(root, None, 1, True)
+   #     return root
+   #     
+   # def track(self, node: 'Optional[Node]', parent: 'Optional[Node]', level: int, amIRightChild: bool):
+   #   if not node:
+   #     return
+   #   
+   #   if not amIRightChild: # leftnode
+   #     node.next = parent.right
+   #   elif parent and not parent.right:
+   #     node.next = None
+   #   elif parent:
+   #     node.next = parent.next.left if parent.next else None
+   #   if node.left:
+   #     self.track(node.left, node, level+1, False)
+   #   if node.right:
+   #     self.track(node.right, node, level+1, True)
     
 ## ---------  
 ## LEVEL ORDER TRAVERSAL
