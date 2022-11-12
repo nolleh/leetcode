@@ -6,7 +6,7 @@ class Solution:
         # after the possible rotation and an integer 'target', return the index of 'target' if it is in nums, or return -1 
         # contratints : O(logN) -> do not sort
         
-		# [4,5,6,7,0,1,2] target = 0
+        # [4,5,6,7,0,1,2] target = 0
 
         # 1. first traverse nums to findout pivot
         pivot, left, right = 0, 0, len(nums) -1
