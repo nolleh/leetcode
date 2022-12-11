@@ -20,6 +20,12 @@ class Solution:
         #         return rightres
         #     else:
         #         return root.val
-	    def inorder(r: TreeNode):
-			return inorder(r.left) + [r.val] + inorder(r.right) if r else []	
-		return min(inorder(root, key = lambda x: abs(target - x)))
+        # def inorder(r: TreeNode):
+        #    return inorder(r.left) + [r.val] + inorder(r.right) if r else []	
+        # return min(inorder(root), key = lambda x: abs(target - x))
+
+        closest = root.val
+        while root:
+            closest = min(root.val, closest, key = lambda x: abs(target -x))
+            root = root.left if target < root.val else root.right
+        return closest
