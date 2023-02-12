@@ -8,5 +8,5 @@ class Solution:
         ## 01 xor 01 xor 10 = 10
         output = nums[0]
         for n in nums[1:]:
-            output ^= n 
+            output ^= n
         return output

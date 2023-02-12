@@ -4,7 +4,7 @@ class Solution:
         # has 'only one' repeated number. return that.
         # constraint: uses only constant extraspace.
 
-        # inplace (nlog(n)) 
+        # inplace (nlog(n))
         nums.sort()
 
         l, r = 0, len(nums)
@@ -16,4 +16,3 @@ class Solution:
             else:
                 l = mid + 1
         return nums[l]
-        

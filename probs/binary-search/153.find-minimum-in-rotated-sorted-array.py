@@ -1,11 +1,12 @@
 # medium
 
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         # [3,4,5,1,2]
         # output 1
         # constraints: O(log N)
-        # F F F T T 
+        # F F F T T
 
         l, r, pivot = 0, len(nums), 0
 

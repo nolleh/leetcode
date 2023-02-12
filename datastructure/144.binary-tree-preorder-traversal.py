@@ -10,7 +10,7 @@ class Solution:
         # ---- recursive
         # if root is None:
         #     return []
-        # return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right) 
+        # return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
 
         # ----iterative
         if root is None:
@@ -18,7 +18,7 @@ class Solution:
         res = []
         q = collections.deque()
         q.append(root)
-        
+
         while q:
             # print(list(map(lambda x: x.val, q)))
             node = q.popleft()
@@ -28,5 +28,5 @@ class Solution:
             if node.right:
                 q.appendleft(node.right)
             if node.left:
-                q.appendleft(node.left) 
+                q.appendleft(node.left)
         return res

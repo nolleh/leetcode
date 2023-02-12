@@ -8,49 +8,50 @@ class Node:
         self.right = right
         self.next = next
 """
-   
-# perfect binary tree : 
+
+# perfect binary tree :
 # 1. all leaves are on same level
 # 2. every parent has two children
 # Runtime: 129 ms, faster than 16.13% (T^T) of Python3 online submissions for Populating Next Right Pointers in Each Node.
 # Memory Usage: 15.5 MB, less than 96.98% of Python3 online submissions for Populating Next Right Pointers in Each Node.
 class Solution:
-    def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-	   	if not root:
+    def connect(self, root: "Optional[Node]") -> "Optional[Node]":
+        if not root:
             return root
-        
+
         leftmost = root
         while leftmost.left:
-
-        head = leftmost
-        while head:
-            head.left.next = head.right
-            if head.next:
-                head.right.next = head.next.left     
-            head = head.next 
-            leftmost = leftmost.left
+            head = leftmost
+            while head:
+                head.left.next = head.right
+                if head.next:
+                    head.right.next = head.next.left
+                head = head.next
+                leftmost = leftmost.left
         return root
-   #     # perfect binary tree is always 2^n + 1
-   #     # where n is level
-   #     self.track(root, None, 1, True)
-   #     return root
-   #     
-   # def track(self, node: 'Optional[Node]', parent: 'Optional[Node]', level: int, amIRightChild: bool):
-   #   if not node:
-   #     return
-   #   
-   #   if not amIRightChild: # leftnode
-   #     node.next = parent.right
-   #   elif parent and not parent.right:
-   #     node.next = None
-   #   elif parent:
-   #     node.next = parent.next.left if parent.next else None
-   #   if node.left:
-   #     self.track(node.left, node, level+1, False)
-   #   if node.right:
-   #     self.track(node.right, node, level+1, True)
-    
-## ---------  
+
+
+#     # perfect binary tree is always 2^n + 1
+#     # where n is level
+#     self.track(root, None, 1, True)
+#     return root
+#
+# def track(self, node: 'Optional[Node]', parent: 'Optional[Node]', level: int, amIRightChild: bool):
+#   if not node:
+#     return
+#
+#   if not amIRightChild: # leftnode
+#     node.next = parent.right
+#   elif parent and not parent.right:
+#     node.next = None
+#   elif parent:
+#     node.next = parent.next.left if parent.next else None
+#   if node.left:
+#     self.track(node.left, node, level+1, False)
+#   if node.right:
+#     self.track(node.right, node, level+1, True)
+
+## ---------
 ## LEVEL ORDER TRAVERSAL
 ## Solution
 ## while (!Q.empty())
@@ -63,8 +64,8 @@ class Solution:
 ##         Q.push(node.right)
 ##     }
 ## }
-## 
-## 
+##
+##
 ##
 # 1. Makes Queue. (Tuple, NULL, nested loop)
 # 2. adding root of the tree in the queue (1) -> (2,3)/ 1 was poped
@@ -116,4 +117,4 @@ class Solution:
         
         # Since the tree has now been modified, return the root node
         return root
-"""      
+"""

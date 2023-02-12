@@ -1,5 +1,6 @@
 ## easy
 
+
 class Solution:
     def mySqrt(self, x: int) -> int:
         # return square root of x rounded down to the nearest integer.
@@ -7,7 +8,7 @@ class Solution:
         l, r = 0, x
         if x == 1:
             return 1
-            
+
         while l < r:
             mid = (r - l) // 2 + l
             square = mid * mid

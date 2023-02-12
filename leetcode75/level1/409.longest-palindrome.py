@@ -3,7 +3,7 @@ class Solution:
         # build longest palindrome.
         # 1. count same - letters
         # 2. you can put only 1 letter for longer palindrome
-       
+
         ans = 0
         for v in collections.Counter(s).values():
             ans += v // 2 * 2

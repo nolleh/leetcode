@@ -1,6 +1,6 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        nodes = {} 
+        nodes = {}
         node = head
         while node:
             if node in nodes:

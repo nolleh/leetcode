@@ -6,18 +6,17 @@ class Solution:
         levels = []
         level = 0
         while queue:
-            levels.append([]) 
+            levels.append([])
             level_length = len(queue)
-            
+
             for i in range(level_length):
                 node = queue.popleft()
                 levels[level].append(node.val)
-                
+
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-        
-            level +=1
+
+            level += 1
         return levels
-        

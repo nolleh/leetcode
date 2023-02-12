@@ -11,4 +11,4 @@ class Solution:
                 ans *= current_product
             current_product *= current_product
             n //= 2
-        return ans         
+        return ans

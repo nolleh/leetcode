@@ -2,6 +2,8 @@ class Node:
     def __init__(self):
         self.childs = {}
         self.finished = False
+
+
 class Trie:
     def __init__(self):
         self.n = Node()
@@ -13,7 +15,7 @@ class Trie:
                 node.childs[c] = Node()
             node = node.childs[c]
         node.finished = True
-        
+
     def search(self, word: str) -> bool:
         node = self.n
         for w in word:
@@ -22,7 +24,6 @@ class Trie:
                 return False
             node = c[w]
         return node.finished
-        
 
     def startsWith(self, prefix: str) -> bool:
         node = self.n

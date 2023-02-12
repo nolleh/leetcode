@@ -2,6 +2,7 @@ class Solution:
     def rob(self, nums: List[int]) -> int:
         ## return maximum with not visiting adjacent houses.
         memo = {}
+
         def iter(i: int):
             if i in memo:
                 return memo[i]
@@ -13,7 +14,7 @@ class Solution:
                 memo[i] = ans
             return ans
 
-        output = 0 
+        output = 0
         for i in range(len(nums)):
             output = max(iter(i), output)
         return output

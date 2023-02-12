@@ -2,7 +2,7 @@ class Solution:
     def reverseWords(self, s: str) -> str:
         # reverse string while still preserving whitespace and initial word order
         res = []
-        ws = s.split(' ')
+        ws = s.split(" ")
 
         # too verbose to implement reverse
         # (I've already solved O(N) reverse questions 1min ago), so use builtin method

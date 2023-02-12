@@ -6,8 +6,9 @@ class Solution:
 
             for i in range(len(remains)):
                 curr += [remains[i]]
-                backtrack(curr, remains[:i] + remains[i+1:])
+                backtrack(curr, remains[:i] + remains[i + 1 :])
                 curr.pop()
-        output = [] 
+
+        output = []
         backtrack([], nums)
         return output

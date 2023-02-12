@@ -10,21 +10,21 @@ class Solution:
         a, b = nums1, nums2
         if len(a) < len(b):
             a, b = b, a
-        M = len(a) 
+        M = len(a)
         N = len(b)
-        
+
         total = M + N
         half = total // 2
         l, r = 0, N - 1
-        
+
         while True:
             i = (r + l) // 2
             j = half - i - 2
 
-            bLpart = b[i] if i >= 0 else float('-infinity')
-            bRpart = b[i + 1] if (i + 1) < N else float('infinity')
-            aLpart = a[j] if j >= 0 else float('-infinity')
-            aRpart = a[j + 1] if (j + 1) < M else float('infinity')
+            bLpart = b[i] if i >= 0 else float("-infinity")
+            bRpart = b[i + 1] if (i + 1) < N else float("infinity")
+            aLpart = a[j] if j >= 0 else float("-infinity")
+            aRpart = a[j + 1] if (j + 1) < M else float("infinity")
 
             if bLpart <= aRpart and aLpart <= bRpart:
                 if total % 2 == 0:
@@ -35,4 +35,4 @@ class Solution:
                 # too big for b lpart
                 r = i - 1
             else:
-                l = i + 1 
+                l = i + 1

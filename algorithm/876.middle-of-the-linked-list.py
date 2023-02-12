@@ -12,5 +12,4 @@ class Solution:
                 break
             node = node.next
             fast = fast.next.next
-        return node 
-         
+        return node

@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        stack = [] 
-        
+        stack = []
+
         # for c in s:
         #     if c == '(' or c == '[' or c == '{':
         #         stack += [c]
@@ -14,12 +14,12 @@ class Solution:
         #         return False
         #     elif c == '}' and stack[-1] != '{':
         #         return False
-        #     stack.pop() 
+        #     stack.pop()
         # return len(stack) == 0
-        match = { '{':'}', '[': ']', '(': ')' }
+        match = {"{": "}", "[": "]", "(": ")"}
 
         for c in s:
-            if c in ['}', ']', ')']:
+            if c in ["}", "]", ")"]:
                 if not stack or match[stack[-1]] != c:
                     return False
                 if stack:

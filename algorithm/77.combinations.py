@@ -1,6 +1,6 @@
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
-        def backtrack(first = 1, curr = []):
+        def backtrack(first=1, curr=[]):
             if len(curr) == k:
                 ## append: mutate the old list. (inplace)
                 output.append(curr[:])
@@ -13,7 +13,7 @@ class Solution:
                 backtrack(i + 1, curr)
                 # remove last value for backtrack
                 curr.pop()
-            
+
         output = []
         backtrack()
         return output

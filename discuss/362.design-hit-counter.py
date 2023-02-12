@@ -1,9 +1,10 @@
 from collections import deque
+
+
 class HitCounter:
-     
     def __init__(self):
         self.h = deque()
-        
+
     def hit(self, timestamp: int) -> None:
         self.h.append(timestamp)
 
@@ -12,8 +13,9 @@ class HitCounter:
         while self.h and timestamp - self.h[0] >= 300:
             self.h.popleft()
         return len(self.h)
-    
+
     # TC: O(N) SC: O(N)
+
 
 # Your HitCounter object will be instantiated and called as such:
 # obj = HitCounter()

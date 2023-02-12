@@ -9,7 +9,7 @@ class Solution:
         # if not root:
         #     return sys.maxsize
         # if root.val > target:
-        #     leftres = self.closestValue(root.left, target) 
+        #     leftres = self.closestValue(root.left, target)
         #     if abs(leftres - target) < abs(root.val - target):
         #         return leftres
         #     else:
@@ -21,11 +21,11 @@ class Solution:
         #     else:
         #         return root.val
         # def inorder(r: TreeNode):
-        #    return inorder(r.left) + [r.val] + inorder(r.right) if r else []	
+        #    return inorder(r.left) + [r.val] + inorder(r.right) if r else []
         # return min(inorder(root), key = lambda x: abs(target - x))
 
         closest = root.val
         while root:
-            closest = min(root.val, closest, key = lambda x: abs(target -x))
+            closest = min(root.val, closest, key=lambda x: abs(target - x))
             root = root.left if target < root.val else root.right
         return closest

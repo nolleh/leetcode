@@ -6,16 +6,15 @@ class Solution:
                 node = node.left
             else:
                 node = node.right
-                
+
         return node
- 
 
     def searchBST2(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         if not root:
             return None
         if root.val == val:
             return root
-        
+
         if val < root.val:
             return self.searchBST2(root.left, val)
         return self.searchBST2(root.right, val)

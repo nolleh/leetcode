@@ -9,8 +9,8 @@ class Solution:
                 backtrack(curr + s[i].upper())
                 backtrack(curr + s[i].lower())
             else:
-                backtrack(curr + s[i]) 
+                backtrack(curr + s[i])
 
-        output = [] 
-        backtrack('')
+        output = []
+        backtrack("")
         return output

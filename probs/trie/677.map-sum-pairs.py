@@ -1,8 +1,11 @@
 class Node:
-    __slots__ = 'childs', 'val'
+    __slots__ = "childs", "val"
+
     def __init__(self):
         self.childs = {}
-        self.val = 0 
+        self.val = 0
+
+
 class MapSum:
     def __init__(self):
         self.map = {}
@@ -16,17 +19,17 @@ class MapSum:
         for w in key:
             node = node.childs.setdefault(w, Node())
             node.val += delta
-    
+
     def sum(self, prefix: str) -> int:
         sum = 0
         node = self.root
         for w in prefix:
             if w not in node.childs:
                 return 0
-                
-            node = node.childs[w] 
+
+            node = node.childs[w]
             sum = node.val
-        return sum    
+        return sum
 
 
 # Your MapSum object will be instantiated and called as such:

@@ -6,15 +6,16 @@ class Node:
         self.children = children
 """
 
+
 class Solution:
-    def maxDepth(self, root: 'Node') -> int:
-        ## recursive 
-		#if not root:
-        #    return 0 
-        
-        #return 1 + max([self.maxDepth(c) for c in root.children] if root.children else [0]
-		## iterative
-		stack = [(root, 1)]
+    def maxDepth(self, root: "Node") -> int:
+        ## recursive
+        # if not root:
+        #    return 0
+
+        # return 1 + max([self.maxDepth(c) for c in root.children] if root.children else [0]
+        ## iterative
+        stack = [(root, 1)]
         maxlen = 0
         while stack:
             node, depth = stack.pop()
@@ -22,6 +23,5 @@ class Solution:
                 maxlen = max(maxlen, depth)
                 for c in node.children:
                     stack += [(c, depth + 1)]
-            
-        return maxlen
 
+        return maxlen

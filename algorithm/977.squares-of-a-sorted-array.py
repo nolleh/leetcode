@@ -1,6 +1,6 @@
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        l,r = 0, len(nums) -1
+        l, r = 0, len(nums) - 1
         res = []
         while l <= r:
             if abs(nums[l]) > abs(nums[r]):

@@ -1,10 +1,11 @@
 # medium
 
+
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         if 1 == len(nums):
             return [0, 0] if target == nums[0] else [-1, -1]
-        
+
         begin, end = 0, len(nums) - 1
         first = -1
         while begin <= end:
@@ -24,7 +25,7 @@ class Solution:
         if begin == -1:
             return [-1, -1]
 
-        begin = 0 
+        begin = 0
         while begin <= end:
             mid = (end - begin) // 2 + begin
             if target == nums[mid]:

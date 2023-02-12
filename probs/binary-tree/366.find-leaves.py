@@ -1,4 +1,5 @@
 from typing import List
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -12,12 +13,14 @@ class Solution:
         while p:
             this_time, p = self.leaves(root, None, False)
             res += [this_time]
-        return res    
-       
-    def leaves(self, node: Optional[TreeNode], p: Optional[TreeNode], is_left: bool) -> (List[int], Optional[TreeNode]):
+        return res
+
+    def leaves(
+        self, node: Optional[TreeNode], p: Optional[TreeNode], is_left: bool
+    ) -> (List[int], Optional[TreeNode]):
         if node is None:
             return [], node
-        
+
         if node.left is None and node.right is None:
             if p is not None:
                 if is_left:
@@ -25,4 +28,8 @@ class Solution:
                 else:
                     p.right = None
             return [node.val], p
-        return self.leaves(node.left, node, True)[0] + self.leaves(node.right, node, False)[0], node
+        return (
+            self.leaves(node.left, node, True)[0]
+            + self.leaves(node.right, node, False)[0],
+            node,
+        )

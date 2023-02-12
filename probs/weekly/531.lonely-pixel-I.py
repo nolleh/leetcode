@@ -5,7 +5,7 @@ class Solution:
 
         for i in range(len(picture)):
             for j in range(len(picture[i])):
-                if 'W' == picture[i][j]:
+                if "W" == picture[i][j]:
                     continue
                 rows[i] += 1
                 cols[j] += 1
@@ -13,6 +13,6 @@ class Solution:
         count = 0
         for i in range(len(picture)):
             for j in range(len(picture[i])):
-                if 'B' == picture[i][j] and rows[i] == 1 and cols[j] == 1:
-                    count+=1
+                if "B" == picture[i][j] and rows[i] == 1 and cols[j] == 1:
+                    count += 1
         return count

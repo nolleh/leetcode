@@ -4,7 +4,9 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         head = ListNode(-1)
         lastnode = head
         while list1 or list2:
@@ -16,4 +18,4 @@ class Solution:
                 lastnode.next = list2
                 list2 = list2.next
             lastnode = lastnode.next
-        return head.next 
+        return head.next

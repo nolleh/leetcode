@@ -7,7 +7,7 @@ class Solution:
             # swap
             stones[index_of_largest], stones[-1] = stones[-1], stones[index_of_largest]
             return stones.pop()
-        
+
         while len(stones) > 1:
             n1 = remove_largest()
             n2 = remove_largest()

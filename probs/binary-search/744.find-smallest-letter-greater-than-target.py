@@ -3,7 +3,7 @@ class Solution:
         # 1. non decreasing order
         # 2. return lexicoraphically grater than 'target'
         l, r = 0, len(letters)
-        found = False 
+        found = False
         while l < r:
             mid = (r - l) // 2 + l
             if target < letters[mid]:

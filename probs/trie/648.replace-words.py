@@ -3,14 +3,16 @@ class TrieNode:
         self.childs = {}
         self.match_dict = False
         self.leaf = False
-        
+
+
 class Solution:
     def __init__(self):
         self.trie = TrieNode()
         self.dicts = {}
+
     def insert(self, word: str) -> str:
         node = self.trie
-        s = '';
+        s = ""
         for w in word:
             if w not in node.childs:
                 node.childs[w] = TrieNode()
@@ -21,13 +23,13 @@ class Solution:
             s += w
         node.leaf = True
         return s
-         
+
     def replaceWords(self, dictionary: List[str], sentence: str) -> str:
         for d in dictionary:
             self.dicts.setdefault(d, True)
-        
+
         ans = []
-        for s in sentence.split(' '):
+        for s in sentence.split(" "):
             ns = self.insert(s)
             ans += [ns]
-        return ' '.join(ans) 
+        return " ".join(ans)
