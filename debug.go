@@ -13,7 +13,7 @@ func debug(desc string, datas ...int) {
         }
     }
     str += ") "
-	
+
 	panic(str + ":" + desc)
 }
 
@@ -71,7 +71,7 @@ func debugbytes(desc string, datas ...[]byte) {
 		}
 		str += ") "
 	}
-    
+
     panic(str)
 
 }
@@ -84,7 +84,7 @@ type ListNode struct {
 func debugNode(head *ListNode) {
     now := head
     str := "["
-    
+
     for now != nil {
         str += strconv.Itoa(now.Val) + ","
         now = now.Next

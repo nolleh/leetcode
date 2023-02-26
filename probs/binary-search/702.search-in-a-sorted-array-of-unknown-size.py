@@ -8,7 +8,6 @@
 
 class Solution:
     def search(self, reader: "ArrayReader", target: int) -> int:
-
         l = 0
         r = 1
         # find boundaries

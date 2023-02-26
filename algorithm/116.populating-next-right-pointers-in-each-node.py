@@ -8,6 +8,7 @@ class Node:
         self.next = next
 """
 
+
 # perfect binary tree :
 # 1. all leaves are on same level
 # 2. every parent has two children

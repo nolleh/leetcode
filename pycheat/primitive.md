@@ -1,6 +1,6 @@
 
-# 1) DS 
-## stack 
+# 1) DS
+## stack
 
 initialize
 ```python
@@ -21,7 +21,7 @@ stack.pop()
 
 top
 
-```python 
+```python
 stack[-1]
 ```
 

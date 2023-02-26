@@ -1,5 +1,7 @@
 from queue import Queue
 import math
+
+
 class Solution:
     def numSquares(self, n: int) -> int:
         # return the least number of perfect square nmbers that sum to 'n'
@@ -21,13 +23,13 @@ class Solution:
             for _ in range(s):
                 t = q.get()
                 if t == 0:
-                    return step 
+                    return step
                 mx = int(math.sqrt(n))
                 for i in range(mx, 0, -1):
                     nt = t - i * i
                     if nt == 0:
-                        return step + 1 
+                        return step + 1
                     elif nt > 0:
                         q.put((nt))
-            step += 1 
+            step += 1
         return -1
