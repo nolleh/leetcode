@@ -86,19 +86,22 @@ AI: Good approach with sliding window! But let's trace through "abba":
 
 When user asks to pick a random problem:
 1. Check existing solutions in the repository to avoid duplicates
-2. Use web_search tool to fetch the full problem description from LeetCode
+2. **Directly fetch problem from https://leetcode.com/studyplan/top-interview-150/** - DO NOT use web_search
+   - Access the study plan URL directly to get the problem list
+   - Select a problem that hasn't been solved yet
 3. Display the complete problem **in English exactly as it appears on LeetCode**, including:
    - Problem title and number
    - Full problem description (word-for-word from LeetCode)
    - All example test cases with explanations
    - All constraints
-   - LeetCode URL
+   - Direct LeetCode problem URL (e.g., https://leetcode.com/problems/{problem-slug}/)
 4. Mention the problem category (e.g., sliding window, DP, graph)
 5. Ask if they want hints about the approach or want to try first
 
 **Important**:
-- Always fetch and show the full problem description so user doesn't need to open a browser
+- Always fetch problem directly from the study plan URL - NEVER use web_search tool
 - Display problem text in English, exactly as written on LeetCode (don't summarize or paraphrase)
+- If unable to access the study plan page directly, ask user to manually provide the problem number from the study plan
 
 ### File Creation Workflow
 
