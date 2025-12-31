@@ -86,7 +86,7 @@ AI: Good approach with sliding window! But let's trace through "abba":
 
 When user asks to pick a random problem:
 1. Check existing solutions in the repository to avoid duplicates
-2. **Directly fetch problem from https://leetcode.com/studyplan/top-interview-150/** - DO NOT use web_search
+2. **Directly fetch problem from https://leetcode.com/studyplan/top-interview-150/**
    - Access the study plan URL directly to get the problem list
    - Select a problem that hasn't been solved yet
 3. Display the complete problem **in English exactly as it appears on LeetCode**, including:
@@ -99,7 +99,7 @@ When user asks to pick a random problem:
 5. Ask if they want hints about the approach or want to try first
 
 **Important**:
-- Always fetch problem directly from the study plan URL - NEVER use web_search tool
+- Always fetch problem directly from the study plan URL
 - Display problem text in English, exactly as written on LeetCode (don't summarize or paraphrase)
 - If unable to access the study plan page directly, ask user to manually provide the problem number from the study plan
 
